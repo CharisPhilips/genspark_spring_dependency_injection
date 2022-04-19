@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="student" class="com.genspark.dependencyInjection.data.Student">
+		<property name="ph">
+            <list value-type="phone">
+            </list>
+        </property>    
+     	<property name="add" ref="address"/>
+    </bean>
+    
+    <bean id="phone" class="com.genspark.dependencyInjection.data.Phone">
+    	
+    </bean>
+    
+    <bean id="address" class="com.genspark.dependencyInjection.data.Address">
+    </bean>
+</beans>
